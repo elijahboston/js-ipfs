@@ -99,6 +99,7 @@ function getLibp2pOptions ({ options, config, datastore, keychainConfig, peerId,
 
   /** @type {Libp2pOptions} */
   const libp2pDefaults = {
+    ...options.libp2p,
     datastore,
     peerId: peerId
   }
@@ -217,6 +218,6 @@ function getLibp2pOptions ({ options, config, datastore, keychainConfig, peerId,
       return d != null && d[Symbol.toStringTag] !== '@libp2p/mdns'
     })
   }
-
+  
   return libp2pFinalConfig
 }

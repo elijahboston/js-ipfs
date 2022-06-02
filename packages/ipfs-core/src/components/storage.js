@@ -150,7 +150,7 @@ const initRepo = async (print, repo, options) => {
 
   // Create libp2p for Keychain creation
   const libp2p = await createLibp2p({
-    options: undefined,
+    options: { libp2p: options.libp2p },
     multiaddrs: undefined,
     peerId,
     repo,
